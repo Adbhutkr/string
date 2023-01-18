@@ -1,0 +1,49 @@
+For a given two strings, 'str1' and 'str2', check whether they are a permutation of each other or not.
+Sample Input 1:
+abcde
+baedc
+Sample Output 1:
+true
+Sample Input 2:
+abc
+cbd
+Sample Output 2:
+false
+
+ANS)    public class Solution 
+{
+
+	public static boolean isPermutation(String str1, String str2)
+	 {
+		int l1 = str1.length();
+		int l2 = str2.length();
+		 boolean ans= false;//str1 = str1;
+		
+		int a1=0,a2=0;
+		if(l1==l2)
+		{
+		for(int i = 0;i<l1;i++)
+		{
+			char ch1  = str1.charAt(i);
+            a1+=(int)ch1;
+
+		}
+			for(int j = 0;j<l2;j++)
+			{
+               char ch2  = str2.charAt(j);
+			  a2+=(int)ch2;
+			}
+			if(a1==a2)
+			{
+				ans=true;
+			}
+			
+	 }
+	 	return ans;
+}
+}
+
+
+		
+	 
+
