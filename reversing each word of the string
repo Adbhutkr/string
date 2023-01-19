@@ -1,0 +1,31 @@
+Aadil has been provided with a sentence in the form of a string as a function parameter. The task is to implement a function so as to print the sentence such that each word in the sentence is reversed.
+Example:
+Input Sentence: "Hello, I am Aadil!"
+The expected output will print, ",olleH I ma !lidaA".
+
+
+ANS)
+
+public class Solution {
+
+	public static String reverseEachWord(String str) 
+	{
+	  //String word="",store=""; 
+		str += " ";    int l = str.length(); 
+		String word = "";String store = "";
+	  for(int i = 0;i<l;i++)
+	  {
+		  char ch = str.charAt(i);
+         if(ch!=' ')
+		 {
+             word = ch+word;
+		 }
+	     else{
+		 store +=word+" ";
+		 word = "";
+		 }
+	  }	
+     return store;
+	}
+
+}
