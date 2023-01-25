@@ -1,0 +1,21 @@
+Sample Input 1 :
+abcdcba
+Sample Output 1 :
+true 
+ANS)    class pall
+{
+    public static void main(String[] args)
+    {
+        String str = "ADBHUTadbhut";int n= str.length(); boolean bn=true;
+        for(int i =0 ; i<n/2 ; i++)
+        {
+            if(str.charAt(i)!=str.charAt(n-(i+1)))
+            {
+               bn = false;
+               break;
+            }
+            
+        }
+        System.out.println(bn); 
+    }
+}
